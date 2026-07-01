@@ -78,7 +78,7 @@ export default function OnyxTeam() {
     },
     {
       id: 5,
-      name: "Hisham Rashed",
+      name: "طب مفيش خالص",
       role: "Student Mechatronics",
       roleColor: "text-violet-400",
       size: "square",
