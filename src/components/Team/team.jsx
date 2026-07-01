@@ -83,7 +83,7 @@ export default function OnyxTeam() {
       roleColor: "text-violet-400",
       size: "square",
       icons: ["globe", "shield"],
-      img: "/hisham.jpg",
+      img: "/sorry.jpg",
       social: {
         facebook: "https://facebook.com/youssef",
         linkedin: "https://linkedin.com/in/youssef",
