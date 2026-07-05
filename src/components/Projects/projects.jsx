@@ -5,22 +5,22 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function Projects() {
 
-     const navigateTeam = useNavigate();
-  const navigateHome = useNavigate();
-  const navigateProjects = useNavigate();
+    const navigateTeam = useNavigate();
+    const navigateHome = useNavigate();
+    const navigateProjects = useNavigate();
 
-      const team = () => {
-    navigateTeam('team');
-  }
+    const team = () => {
+        navigateTeam('team');
+    }
 
-  const home = () => {
-    navigateHome('/');
-  }
-  
-  const projects = () => {
-    navigateProjects('projects');
-  }
-  
+    const home = () => {
+        navigateHome('/');
+    }
+
+    const projects = () => {
+        navigateProjects('projects');
+    }
+
 
     const specs = [
         { label: "Max Velocity", value: "85 km/h" },
@@ -29,14 +29,21 @@ export default function Projects() {
         { label: "Processing", value: "NVIDIA Jetson Orin" },
     ];
 
-    const tech = ["Python", "ROS 2 Humble", "SolidWorks", "C++ 20", "PyTorch", "OpenCV"];
+    const tech = ["Python", "Machine Learning", "SolidWorks", "Proutes", "C++", "Arduino IDE "];
 
     const engineers = [
-        { name: "Alex Thorne", role: "Lead Engineer", roleColor: "text-cyan-400", icons: ["li", "gh"], img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=220&fit=crop&grayscale" },
-        { name: "Sarah Chen", role: "Software Architect", roleColor: "text-cyan-400", icons: ["li", "globe"], img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&h=220&fit=crop&grayscale" },
-        { name: "Marcus Vane", role: "Avionics Lead", roleColor: "text-violet-400", icons: ["eye", "grid"], img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=220&fit=crop&grayscale" },
-        { name: "Elena Rossi", role: "CV Researcher", roleColor: "text-cyan-400", icons: ["eye", "globe"], img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=220&fit=crop&grayscale" },
+        { name: "Youssef Alaa", role: "Programing & Design", roleColor: "text-cyan-400", icons: ["li", "gh"], img: "/alaa.jpeg" },
+        { name: "Hisham Rashad", role: "Mechanical", roleColor: "text-cyan-400", icons: ["li", "globe"], img: "/hisham.jpg" },
+        { name: "Gamal Nasr", role: "Mechanical", roleColor: "text-violet-400", icons: ["eye", "grid"], img: "/gamal.jpeg" },
+        { name: "Youssef Ashraf", role: "Mechanical", roleColor: "text-cyan-400", icons: ["eye", "globe"], img: "/ashraf.jpeg" },
     ];
+
+    const girls = [
+        { name: "Yousra Mahmoud", role: "Progrming", roleColor: "text-cyan-400", icons: ["li", "gh"], img: "/yousra.jpeg" },
+        { name: "Asmaa Gamal", role: "Electronics", roleColor: "text-cyan-400", icons: ["li", "gh"], img: "/asmaa.jpeg" },
+        { name: "Shimaa Reda", role: "Electronics", roleColor: "text-cyan-400", icons: ["li", "gh"], img: "/shaima.jpeg" },
+        { name: "Heba Nasr", role: "Electronics", roleColor: "text-cyan-400", icons: ["li", "gh"], img: "/heba.jpeg" },
+    ]
 
     /*   icon set  */
     const Ic = ({ n }) => ({
@@ -70,41 +77,33 @@ export default function Projects() {
                     <Link>Contact</Link>
                 </div>
                 <button className="mono text-[0.68rem] bg-violet-600 hover:bg-violet-500 transition-colors px-5 py-2 rounded tracking-wider">
-                   
+
                 </button>
             </nav>
 
             <section className="relative h-[70vh] min-h-[480px] overflow-hidden">
                 {/* background image */}
-                <img
-                    src=""
-                    alt="Drone"
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
+                <div className="absolute inset-0">
+                    <img
+                        src="/machin.jpeg"
+                        alt="machin"
+                        className="w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-black/50" />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0c0c0f]" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0c0c0f]/70 via-transparent to-transparent" />
 
                 {/* content */}
                 <div className="relative z-10 h-full flex flex-col justify-end px-8 pb-12 max-w-2xl">
-                    <div className="flex items-center gap-3 mb-5">
-                        <span className="mono text-[0.58rem] tracking-[0.15em] uppercase bg-violet-600/80 px-2.5 py-1 rounded">
-                            Active Research
-                        </span>
-                        <span className="mono text-[0.58rem] tracking-[0.12em] text-white/40 uppercase">
-                            Project ID: OX-092
-                        </span>
-                    </div>
+
                     <h1 className="text-[clamp(3rem,8vw,6rem)] font-extrabold leading-none tracking-tight mb-1">
-                        Sooooonnnnn
+                        SVRM
                     </h1>
                     <h1 className="text-[clamp(3rem,8vw,6rem)] font-extrabold leading-none tracking-tight text-violet-400 mb-6">
-                        
+
                     </h1>
-                    <p className="text-white/55 max-w-sm leading-relaxed text-[0.88rem]">
-                        A next-generation aerial system leveraging real-time edge computing
-                        and computer vision for complex environment navigation without GPS
-                        dependency.
-                    </p>
+
                 </div>
             </section>
 
@@ -182,6 +181,22 @@ export default function Projects() {
                         </div>
                     ))}
                 </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {girls.map(e => (
+                        <div key={e.name} className="card-lift rounded-xl border border-white/[0.07] bg-[#111116] overflow-hidden cursor-pointer">
+                            <img src={e.img} alt={e.name} className="img-bw w-full h-48 object-cover object-top" />
+                            <div className="p-4">
+                                <h3 className="font-bold text-[0.9rem] mb-0.5">{e.name}</h3>
+                                <p className={`mono text-[0.56rem] tracking-[0.12em] uppercase mb-3 ${e.roleColor}`}>{e.role}</p>
+                                <div className="flex gap-2.5 text-white/35">
+                                    {e.icons.map(ic => (
+                                        <button key={ic} className="hover:text-white/75 transition-colors"><Ic n={ic} /></button>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </section>
 
             <section className="max-w-7xl mx-auto px-8 pb-20">
@@ -212,7 +227,7 @@ export default function Projects() {
             {/* ── FOOTER ── */}
             <footer className="border-t border-white/[0.06] px-8 py-7 flex flex-col md:flex-row items-center justify-between gap-4 max-w-7xl mx-auto">
                 <span className="font-extrabold text-base tracking-widest uppercase">Onyx</span>
-                
+
                 <div className="flex gap-7">
                     {/* social links */}
                     {["Twitter", "GitHub", "LinkedIn", "Discord"].map(l => (
